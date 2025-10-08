@@ -1,6 +1,13 @@
 {
     "version": 2,
     "framework": null,
+    "builds": [
+        {
+            "src": "composer.json",
+            "use": "@vercel/php",
+            "config": { "zeroConfig": true }
+        }
+    ],
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
@@ -22,7 +29,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://your-app-name.vercel.app",
+        "APP_URL": "https://instants.vercel.app",
         "APP_KEY": "base64:n1PXDxSqnMe/6lzI12kBVxrvah/09Dg59PLKLqjQ+Qk=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
