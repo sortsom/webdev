@@ -6,7 +6,8 @@
     },
     "routes": [
         {
-            "src": "/(.*)", "dest": "/public/index.php" 
+            "src": "/build/(.*)",
+            "dest": "/public/build/assets"
         },
         {
             "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
@@ -21,7 +22,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://instants.vercel.app/",
+        "APP_URL": "https://instants.vercel.app",
         "APP_KEY": "base64:n1PXDxSqnMe/6lzI12kBVxrvah/09Dg59PLKLqjQ+Qk=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
