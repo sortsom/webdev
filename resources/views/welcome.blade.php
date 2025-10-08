@@ -22,15 +22,9 @@
        <div class="row">
         <div class="col-md-5">
 
-            <div class="text-center">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mx-auto mb-4" style="max-width: 200px;">
-                <h1 class="text-4xl font-bold mb-2">{{ config('app.name', 'Laravel') }}</h1>
-                <p class="text-lg mb
+            hello world
         </div>
        </div>
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
     </body>
 </html>
