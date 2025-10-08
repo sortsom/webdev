@@ -1,27 +1,29 @@
 {
     "version": 2,
     "framework": null,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": { "distDir": "public" }
-        }
-    ],
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/build/$1" },
-        { "src": "\/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$", "dest": "/public/$1" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        {
+            "src": "/build/(.*)",
+            "dest": "/build/$1"
+        },
+        {
+            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
     ],
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://instants.vercel.app",
-        "APP_KEY": "base64:n1PXDxSqnMe/6lzI12kBVxrvah/09Dg59PLKLqjQ+Qk=",
+        "APP_URL": "https://your-app-name.vercel.app",
+        "APP_KEY": "base64:aKI+hj1SQMorjQ5WOkXKdLqLku6QJK8u2TiGdNzx8M8=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -34,6 +36,4 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
     }
-
-    
 }
