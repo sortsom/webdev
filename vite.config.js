@@ -4,10 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     server: {
-        https: true
-    },
-    plugins: [
-        laravel(['resources/css/app.css', 'resources/js/app.js']),
-        tailwindcss()
-    ],
+        https: false,
+        host: '127.0.0.1',
+        port: 5173
+    }
 });
+
