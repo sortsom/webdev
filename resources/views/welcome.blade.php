@@ -20,30 +20,20 @@
     </head>
     <body>
          <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Welcome to {{ config('app.name', 'Laravel') }}</div>
-
-                        <div class="card-body">
-                            @if (Route::has('login'))
-                                <div class="mb-3">
-                                    @auth
-                                        <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
-                                    @else
-                                        <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
-
-                                        @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="btn btn-secondary">Register</a>
-                                        @endif
-                                    @endauth
-                                </div>
-                            @endif
-
-                            <p>You have successfully deployed your Laravel application.</p>
-                        </div>
-                    </div>
-                </div>
+            <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
             </div>
     </body>
 </html>
