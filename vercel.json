@@ -3,12 +3,6 @@
     "framework": null,
     "builds": [
         {
-            "src": "composer.json",
-            "use": "@vercel/php",
-            "config": { "zeroConfig": true }
-        }
-        ,
-        {
             "src": "package.json",
             "use": "@vercel/static-build",
             "config": { "distDir": "public" }
@@ -18,18 +12,9 @@
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/build/$1"
-        },
-        {
-            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
+        { "src": "/build/(.*)", "dest": "/build/$1" },
+        { "src": "\/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$", "dest": "/public/$1" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "outputDirectory": "public",
     "env": {
